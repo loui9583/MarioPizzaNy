@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Menu {
-  ArrayList<MenuItems> menuCard = new ArrayList();
+  ArrayList<MenuItems> menuCard = new ArrayList<>();
 
   public void createMenu() {
     menuCard.add(new MenuItems(1, "Vesuvio", "Tomatsauce, ost, skinke, oregano", 57));
@@ -24,9 +24,9 @@ public class Menu {
   }
 
   public void showMenu() {
-    for (int i = 0; i < menuCard.size(); i++) {
-      System.out.println(menuCard.get(i).getNumber() + "  " + menuCard.get(i).getName() + "  "
-          + menuCard.get(i).getIngredients() + "  " + menuCard.get(i).getPrice());
+    for (MenuItems menuItems : menuCard) {
+      System.out.println(menuItems.getNumber() + ",  " + menuItems.getName() + ",  "
+          + menuItems.getIngredients() + ",  " + menuItems.getPrice() + ",-");
     }
   }
 
