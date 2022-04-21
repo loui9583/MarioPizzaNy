@@ -6,8 +6,13 @@ public class Controller {
   private boolean loop = true;
 
   public void run() {
+    menuCard.createMenu();
+    while (loop) {
+      menu();
+    }
 
   }
+
 
   public void menu() {
     gui.gui();
