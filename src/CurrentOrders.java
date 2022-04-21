@@ -19,7 +19,7 @@ public class CurrentOrders {
 
   public void showOrders() {
     for (MenuItems menuItems : currentItems) {
-      System.out.println(menuItems.getNumber() + "  " + menuItems.getName());
+      System.out.println(menuItems.getNumber() + ",  " + menuItems.getName());
     }
   }
 

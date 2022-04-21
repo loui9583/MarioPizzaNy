@@ -10,13 +10,13 @@ public class Controller {
     menuCard.createMenu();
     while (loop) {
       currentOrders.showOrders();
-      menu();
+      mainMenu();
     }
 
   }
 
 
-  public void menu() {
+  public void mainMenu() {
     gui.gui();
     switch (gui.getString()) {
       case "1" -> menuCard.showMenu();
