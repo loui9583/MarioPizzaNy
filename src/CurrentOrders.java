@@ -9,14 +9,15 @@ int orderNumber=1;
 
   public void placeOrder(Menu menu, GUI gui) {
     System.out.println("Enter the wanted pizza by number:");
-    int nr = gui.getInt()-1;
-    if (nr<menu.menuCard.size()+1)
-    {
-    currentItems.add(new MenuItems(menu.menuCard.get(nr).getNumber(),menu.menuCard.get(nr).getName(),menu.menuCard.get(nr).getIngredients(),menu.menuCard.get(nr).getPrice()));
-    currentItems.get(orderCounter).setTimeStamp(LocalTime.now());
-    currentItems.get(orderCounter).setOrderNumber(orderNumber);
-    orderCounter+=1;
-    orderNumber+=1;
+    nr = gui.getInt() - 1;
+    if (nr < menu.menuCard.size() + 1) {
+      orderNumber += 1;
+      currentItems.add(new MenuItems(menu.menuCard.get(nr).getNumber(), menu.menuCard.get(nr).getName(),
+          menu.menuCard.get(nr).getIngredients(), menu.menuCard.get(nr).getPrice()));
+      currentItems.get(orderCounter).setTimeStamp(LocalTime.now());
+      currentItems.get(orderCounter).setOrderNumber(orderNumber);
+      orderCounter += 1;
+
     }
   }
 
@@ -33,11 +34,6 @@ int orderNumber=1;
       System.out.printf("%s%.8s","Bestilt kl: ",menuItems.getTimeStamp());
       System.out.println(".      Pris: "+menuItems.getPrice()+"kr.      Order number:"+menuItems.getOrderNumber());
       System.out.println();
-
-
-
     }
   }
-
-
 }
