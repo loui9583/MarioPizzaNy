@@ -1,25 +1,41 @@
 import java.util.ArrayList;
+import java.time.LocalTime;
 
 public class CurrentOrders {
-  ArrayList<MenuItems> currentItems = new ArrayList<>();
+ArrayList<MenuItems> currentItems = new ArrayList<>();
 
-
-
+int orderCounter=0;
+int orderNumber=1;
 
   public void placeOrder(Menu menu, GUI gui) {
     System.out.println("Enter the wanted pizza by number:");
-    currentItems.add(menu.menuCard.get(gui.getInt() - 1));
+    int nr = gui.getInt()-1;
+    if (nr<menu.menuCard.size()+1)
+    {
+    currentItems.add(new MenuItems(menu.menuCard.get(nr).getNumber(),menu.menuCard.get(nr).getName(),menu.menuCard.get(nr).getIngredients(),menu.menuCard.get(nr).getPrice()));
+    currentItems.get(orderCounter).setTimeStamp(LocalTime.now());
+    currentItems.get(orderCounter).setOrderNumber(orderNumber);
+    orderCounter+=1;
+    orderNumber+=1;
+    }
   }
 
   public void removeOrder(){
     if (currentItems.size()>0)
     currentItems.remove(0);
     else System.out.println("You don't have any orders");
+    if (orderCounter>0) orderCounter-=1;
   }
 
   public void showOrders() {
     for (MenuItems menuItems : currentItems) {
-      System.out.println(menuItems.getNumber() + ",  " + menuItems.getName());
+      System.out.printf("%-20s%-65s","Nr. "+menuItems.getNumber() +" "+menuItems.getName()+":",menuItems.getIngredients());
+      System.out.printf("%s%.8s","Bestilt kl: ",menuItems.getTimeStamp());
+      System.out.println(".      Pris: "+menuItems.getPrice()+"kr.      Order number:"+menuItems.getOrderNumber());
+      System.out.println();
+
+
+
     }
   }
 

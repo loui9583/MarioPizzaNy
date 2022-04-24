@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Menu {
   ArrayList<MenuItems> menuCard = new ArrayList<>();
@@ -24,10 +25,16 @@ public class Menu {
   }
 
   public void showMenu() {
+    boolean loop = true;
+    while (loop){
     for (MenuItems menuItems : menuCard) {
       System.out.println(menuItems.getNumber() + ",  " + menuItems.getName() + ",  "
           + menuItems.getIngredients() + ",  " + menuItems.getPrice() + ",-");
+      System.out.println();
+    }
+      System.out.print("Press Enter to exit the menu.");
+      String pressEnter = new Scanner(System.in).nextLine();
+      loop=false;
     }
   }
-
 }

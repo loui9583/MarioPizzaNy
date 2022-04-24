@@ -9,8 +9,12 @@ public class Controller {
   public void run() {
     menuCard.createMenu();
     while (loop) {
+      System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+      System.out.println("Current Orders: \n");
       currentOrders.showOrders();
+      System.out.print("\n");
       mainMenu();
+
     }
 
   }
@@ -23,7 +27,7 @@ public class Controller {
       case "2" -> {
         currentOrders.placeOrder(menuCard, gui);
         gui.scannerBug();
-      }
+         }
       case "3" -> currentOrders.removeOrder();
       case "4" -> loop = false;
     }

@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 public class GUI {
   private Scanner input = new Scanner(System.in);
 
