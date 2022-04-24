@@ -1,5 +1,3 @@
-
-
 public class Controller {
   private GUI gui = new GUI();
   private Menu menuCard = new Menu();
@@ -28,7 +26,7 @@ public class Controller {
       case "2" -> {
         currentOrders.placeOrder(menuCard, gui);
         gui.scannerBug();
-         }
+      }
       case "3" -> currentOrders.removeOrder();
 
       case "4" -> currentOrders.removeCustomOrder(gui);
