@@ -31,7 +31,9 @@ public class Controller {
          }
       case "3" -> currentOrders.removeOrder();
 
-      case "4" -> loop = false;
+      case "4" -> currentOrders.removeCustomOrder(gui);
+
+      case "5" -> loop = false;
     }
   }
 

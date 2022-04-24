@@ -29,6 +29,16 @@ public class CurrentOrders {
   }
 
 
+  public void removeCustomOrder(GUI gui) {
+    System.out.println("Type the order number you want to remove");
+    for (int i = 0; i < currentItems.size() - 1; i++) {
+      nr = gui.getInt();
+      if (currentItems.get(i).getOrderNumber() == nr) {
+        currentItems.remove(i);
+        orderCounter -= 1;
+      }
+    }
+  }
 
   public void showOrders() {
     for (MenuItems menuItems : currentItems) {
