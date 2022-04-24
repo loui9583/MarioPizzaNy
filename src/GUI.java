@@ -11,7 +11,7 @@ public class GUI {
         What do you want to do?
         1) View menu
         2) Place order
-        3) Remove oldest order
+        3) Remove oldest order       
         4) Exit program       
         """);
   }

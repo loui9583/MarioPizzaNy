@@ -24,7 +24,7 @@ public class Menu {
 
   }
 
-  public void showMenu() {
+  public void showMenu(GUI gui) {
     boolean loop = true;
     while (loop){
     for (MenuItems menuItems : menuCard) {
@@ -33,7 +33,7 @@ public class Menu {
       System.out.println();
     }
       System.out.print("Press Enter to exit the menu.");
-      String pressEnter = new Scanner(System.in).nextLine();
+      gui.getString();
       loop=false;
     }
   }
