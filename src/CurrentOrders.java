@@ -29,10 +29,12 @@ public class CurrentOrders {
   }
 
 
-  public void removeCustomOrder(GUI gui) {
-    System.out.println("Type the order number you want to remove");
-    for (int i = 0; i < currentItems.size() - 1; i++) {
-      nr = gui.getInt();
+  public void removeCustomOrder(int tal) {
+
+
+    for (int i = 0; i < currentItems.size(); i++) {
+      nr = tal;
+
       if (currentItems.get(i).getOrderNumber() == nr) {
         currentItems.remove(i);
         orderCounter -= 1;

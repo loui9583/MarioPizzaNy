@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Controller {
   private GUI gui = new GUI();
   private Menu menuCard = new Menu();
@@ -29,7 +31,11 @@ public class Controller {
       }
       case "3" -> currentOrders.removeOrder();
 
-      case "4" -> currentOrders.removeCustomOrder(gui);
+      case "4" -> {
+        System.out.println("Type the order number you want to remove");
+        currentOrders.removeCustomOrder(new Scanner(System.in).nextInt());
+
+      }
 
       case "5" -> loop = false;
     }
