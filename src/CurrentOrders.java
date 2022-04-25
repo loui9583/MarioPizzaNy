@@ -9,16 +9,23 @@ public class CurrentOrders {
 
   public void placeOrder(Menu menu, GUI gui) {
     System.out.println("Enter the wanted pizza by number:");
-    nr = gui.getInt() - 1;
-    if (nr < menu.menuCard.size() + 1) {
-      orderNumber += 1;
-      currentItems.add(new MenuItems(menu.menuCard.get(nr).getNumber(), menu.menuCard.get(nr).getName(),
-          menu.menuCard.get(nr).getIngredients(), menu.menuCard.get(nr).getPrice()));
-      currentItems.get(orderCounter).setTimeStamp(LocalTime.now());
-      currentItems.get(orderCounter).setOrderNumber(orderNumber);
-      orderCounter += 1;
+    try {
+      nr = gui.getInt() - 1;
 
-    }
+
+      if (nr < menu.menuCard.size() + 1) {
+        orderNumber += 1;
+        currentItems.add(new MenuItems(menu.menuCard.get(nr).getNumber(), menu.menuCard.get(nr).getName(),
+            menu.menuCard.get(nr).getIngredients(), menu.menuCard.get(nr).getPrice()));
+        currentItems.get(orderCounter).setTimeStamp(LocalTime.now());
+        currentItems.get(orderCounter).setOrderNumber(orderNumber);
+        orderCounter += 1;
+      }
+    } catch(Exception e) {
+      System.out.println("Wrong input, please use numbers. Press Enter to continue.");
+      gui.getString();
+       }
+
   }
 
   public void removeOrder() {
