@@ -37,8 +37,6 @@ public class CurrentOrders {
 
 
   public void removeCustomOrder(int tal) {
-
-
     for (int i = 0; i < currentItems.size(); i++) {
       nr = tal;
 
