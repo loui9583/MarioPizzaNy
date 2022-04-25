@@ -6,7 +6,7 @@ public class MenuItems {
   private String ingredients;
   private int price;
   private LocalTime timeStamp;
-private int orderNumber;
+  private int orderNumber;
 
   public void setOrderNumber(int orderNumber) {
     this.orderNumber = orderNumber;
@@ -18,6 +18,10 @@ private int orderNumber;
 
   public void setTimeStamp(LocalTime timeStamp) {
     this.timeStamp = timeStamp;
+  }
+
+  public LocalTime getTimeStamp() {
+    return timeStamp;
   }
 
   public String getName() {
@@ -36,9 +40,7 @@ private int orderNumber;
     return number;
   }
 
-  public LocalTime getTimeStamp() {
-    return timeStamp;
-  }
+
 
 
   public MenuItems(int number, String name, String ingredients, int price) {

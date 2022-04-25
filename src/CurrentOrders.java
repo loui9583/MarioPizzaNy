@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.time.LocalTime;
 
 public class CurrentOrders {
-  ArrayList<MenuItems> currentItems = new ArrayList<>();
+   ArrayList<MenuItems> currentItems = new ArrayList<>();
   private int nr;
   private int orderCounter = 0;
   private int orderNumber = 0;
