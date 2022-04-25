@@ -44,7 +44,8 @@ public class Controller {
       }
 
       case "5" -> {
-        System.out.println("ARE YOU SURE YOU WANT TO EXIT THE PROGRAM? TYPE 'YES' TO EXIT THE PROGRAM, OR 'NO' TO CONTINUE USING THE PROGRAM. ");
+        System.out.println("ARE YOU SURE YOU WANT TO EXIT THE PROGRAM? TYPE 'YES' TO EXIT THE PROGRAM, " +
+            "OR 'NO' TO CONTINUE USING THE PROGRAM. ");
         switch(gui.getString().toUpperCase()){
           case "YES": loop = false;
           break;
