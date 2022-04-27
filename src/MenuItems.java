@@ -1,10 +1,10 @@
 import java.time.LocalTime;
 
 public class MenuItems {
-  private int number;
-  private String name;
-  private String ingredients;
-  private int price;
+  private final int number;
+  private final String name;
+  private final String ingredients;
+  private final int price;
   private LocalTime timeStamp;
   private int orderNumber;
 

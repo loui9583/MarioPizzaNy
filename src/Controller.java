@@ -9,10 +9,8 @@ public class Controller {
   public void run() {
     menuCard.createMenu();
     while (loop) {
-      System.out.println("""           
-          \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
-          Current Orders: \n
-          """);
+      System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" +
+          "Current Orders:\n");
       currentOrders.showOrders();
       System.out.print("\n");
       mainMenu();
@@ -34,7 +32,7 @@ public class Controller {
         try {
           System.out.println("Type the order number you want to remove");
           currentOrders.removeCustomOrder(new Scanner(System.in).nextInt());
-        } catch(Exception e) {
+        } catch (Exception e) {
           System.err.println("Wrong input, please use numbers. Press Enter to continue.");
           new Scanner(System.in).nextLine();
         }
@@ -42,21 +40,24 @@ public class Controller {
       case "5" -> {
         System.out.println("ARE YOU SURE YOU WANT TO EXIT THE PROGRAM? TYPE 'YES' TO EXIT THE PROGRAM, " +
             "OR 'NO' TO CONTINUE USING THE PROGRAM. ");
-        switch(gui.getString().toUpperCase()){
-          case "YES": loop = false;
-          break;
+        switch (gui.getString().toUpperCase()) {
+          case "YES":
+            loop = false;
+            break;
         }
       }
       default -> {
         System.err.println("""
             Invalid input, please use numbers!
-            Press \"enter\" to continue!""");
-        switch(gui.getString().toUpperCase()){
-          case "YES": loop = false;
+            Press "enter" to continue!""");
+        switch (gui.getString().toUpperCase()) {
+          case "YES":
+            loop = false;
             break;
+        }
       }
-      }
+
+    }
 
   }
-
-}
+  }
