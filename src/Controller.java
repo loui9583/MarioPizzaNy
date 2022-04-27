@@ -47,6 +47,14 @@ public class Controller {
           break;
         }
       }
+      default -> {
+        System.err.println("""
+            Invalid input, please use numbers!
+            Press \"enter\" to continue!""");
+        switch(gui.getString().toUpperCase()){
+          case "YES": loop = false;
+            break;
+      }
       }
 
   }
