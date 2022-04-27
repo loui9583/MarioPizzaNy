@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Update_at_24-04-2022_12_07_[Changes]" date="1650794823971" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-04-2022_12_07_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 24-04-2022 12:07 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/MariosPizza/CurrentOrders.class" />
+    <option name="AFTER_PATH" value="out/production/MariosPizza/CurrentOrders.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-04-2022_12_07_[Changes]/CurrentOrders.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/MariosPizza/Controller.class" />
+    <option name="AFTER_PATH" value="out/production/MariosPizza/Controller.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24-04-2022_12_07_[Changes]/Controller.class" />
+  </binary>
+</changelist>

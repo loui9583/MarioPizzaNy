@@ -1,0 +1,18 @@
+Index: src/CurrentOrders.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.ArrayList;\r\nimport java.time.LocalTime;\r\n\r\npublic class CurrentOrders {\r\n  ArrayList<MenuItems> currentItems = new ArrayList<>();\r\n  int nr;\r\n  private int orderCounter = 0;\r\n  private int orderNumber = 0;\r\n\r\n  public void placeOrder(Menu menu, GUI gui) {\r\n    System.out.println(\"Enter the wanted pizza by number:\");\r\n    nr = gui.getInt() - 1;\r\n    if (nr < menu.menuCard.size() + 1) {\r\n      orderNumber += 1;\r\n      currentItems.add(new MenuItems(menu.menuCard.get(nr).getNumber(), menu.menuCard.get(nr).getName(),\r\n          menu.menuCard.get(nr).getIngredients(), menu.menuCard.get(nr).getPrice()));\r\n      currentItems.get(orderCounter).setTimeStamp(LocalTime.now());\r\n      currentItems.get(orderCounter).setOrderNumber(orderNumber);\r\n      orderCounter += 1;\r\n\r\n    }\r\n  }\r\n\r\n  public void removeOrder() {\r\n    if (currentItems.size() > 0)\r\n      currentItems.remove(0);\r\n    else System.out.println(\"You don't have any orders\");\r\n    if (orderCounter > 0) orderCounter -= 1;\r\n  }\r\n\r\n\r\n\r\n  public void showOrders() {\r\n    for (MenuItems menuItems : currentItems) {\r\n      System.out.printf(\"%-20s%-65s\", \"Nr. \" + menuItems.getNumber() + \" \" + menuItems.getName() + \":\",\r\n          menuItems.getIngredients());\r\n      System.out.printf(\"%s%.8s\", \"Bestilt kl: \", menuItems.getTimeStamp());\r\n      System.out.println(\".      Pris: \" + menuItems.getPrice() + \"kr.      Order number:\" +\r\n          menuItems.getOrderNumber());\r\n      System.out.println();\r\n    }\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/CurrentOrders.java b/src/CurrentOrders.java
+--- a/src/CurrentOrders.java	(revision c38a878e6505b82764c9b31c4ef662bf1b6c1090)
++++ b/src/CurrentOrders.java	(date 1650794557440)
+@@ -29,7 +29,6 @@
+   }
+ 
+ 
+-
+   public void showOrders() {
+     for (MenuItems menuItems : currentItems) {
+       System.out.printf("%-20s%-65s", "Nr. " + menuItems.getNumber() + " " + menuItems.getName() + ":",
