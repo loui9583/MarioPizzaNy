@@ -41,8 +41,6 @@ public class MenuItems {
   }
 
 
-
-
   public MenuItems(int number, String name, String ingredients, int price) {
     this.number = number;
     this.name = name;

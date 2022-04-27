@@ -30,28 +30,22 @@ public class Controller {
         gui.scannerBug();
       }
       case "3" -> currentOrders.removeOrder();
-
       case "4" -> {
         try {
           System.out.println("Type the order number you want to remove");
           currentOrders.removeCustomOrder(new Scanner(System.in).nextInt());
         } catch(Exception e) {
-          System.out.println("Wrong input, please use numbers. Press Enter to continue.");
+          System.err.println("Wrong input, please use numbers. Press Enter to continue.");
           new Scanner(System.in).nextLine();
         }
-
-
       }
-
       case "5" -> {
-        System.out.println("ARE YOU SURE YOU WANT TO EXIT THE PROGRAM? TYPE 'YES' TO EXIT THE PROGRAM, " +
+        System.err.println("ARE YOU SURE YOU WANT TO EXIT THE PROGRAM? TYPE 'YES' TO EXIT THE PROGRAM, " +
             "OR 'NO' TO CONTINUE USING THE PROGRAM. ");
         switch(gui.getString().toUpperCase()){
           case "YES": loop = false;
           break;
         }
-
-
       }
       }
 

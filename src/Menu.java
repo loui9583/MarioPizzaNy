@@ -26,15 +26,15 @@ public class Menu {
 
   public void showMenu(GUI gui) {
     boolean loop = true;
-    while (loop){
-    for (MenuItems menuItems : menuCard) {
-      System.out.println(menuItems.getNumber() + ",  " + menuItems.getName() + ",  "
-          + menuItems.getIngredients() + ",  " + menuItems.getPrice() + ",-");
-      System.out.println();
-    }
+    while (loop) {
+      for (MenuItems menuItems : menuCard) {
+        System.out.println(menuItems.getNumber() + ",  " + menuItems.getName() + ",  "
+            + menuItems.getIngredients() + ",  " + menuItems.getPrice() + ",-");
+        System.out.println();
+      }
       System.out.print("Press Enter to exit the menu.");
       gui.getString();
-      loop=false;
+      loop = false;
     }
   }
 }

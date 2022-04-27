@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.time.LocalTime;
 
 public class CurrentOrders {
-   ArrayList<MenuItems> currentItems = new ArrayList<>();
+  ArrayList<MenuItems> currentItems = new ArrayList<>();
   private int nr;
   private int orderCounter = 0;
   private int orderNumber = 0;
@@ -21,10 +21,10 @@ public class CurrentOrders {
         currentItems.get(orderCounter).setOrderNumber(orderNumber);
         orderCounter += 1;
       }
-    } catch(Exception e) {
+    } catch (Exception e) {
       System.out.println("Wrong input, please use numbers. Press Enter to continue.");
       gui.getString();
-       }
+    }
 
   }
 
