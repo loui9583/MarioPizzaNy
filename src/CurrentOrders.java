@@ -22,7 +22,7 @@ public class CurrentOrders {
         orderCounter += 1;
       }
     } catch (Exception e) {
-      System.out.println("Wrong input, please use numbers. Press Enter to continue.");
+      System.err.println("Wrong input, please use numbers. Press Enter to continue.");
       gui.getString();
     }
 
