@@ -9,7 +9,7 @@ public class CurrentOrders {
 
   public void placeOrder(Menu menu, GUI gui) {
     System.out.println("Enter the wanted pizza by number:");
-    try {
+
       nr = gui.getInt() - 1;
 
 
@@ -21,10 +21,7 @@ public class CurrentOrders {
         currentItems.get(orderCounter).setOrderNumber(orderNumber);
         orderCounter += 1;
       }
-    } catch (Exception e) {
-      System.err.println("Wrong input, please use numbers. Press Enter to continue.");
-      gui.getString();
-    }
+      else {System.err.println("That pizza doesn't exist, try again. Press enter to continue.");gui.getString(); }
 
   }
 
@@ -49,7 +46,7 @@ public class CurrentOrders {
 
   public void showOrders() {
     for (MenuItems menuItems : currentItems) {
-      System.out.printf("%-20s%-65s", "Nr. " + menuItems.getNumber() + " " + menuItems.getName() + ":",
+      System.out.printf("%-20s%-80s", "Nr. " + menuItems.getNumber() + " " + menuItems.getName() + ":",
           menuItems.getIngredients());
       System.out.printf("%s%.8s", "Bestilt kl: ", menuItems.getTimeStamp());
       System.out.println(".      Pris: " + menuItems.getPrice() + "kr.      Order number:" +

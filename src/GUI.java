@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 
 public class GUI {
-  private Scanner input = new Scanner(System.in);
+  private Scanner inputString = new Scanner(System.in);
+  private Scanner inputNumber = new Scanner(System.in);
 
 
   public void gui() {
@@ -13,21 +14,24 @@ public class GUI {
         2) Place order
         3) Remove oldest order
         4) Remove custom order
-        5) Exit program
+        5) Add new pizza to the menu card.
+        6) Exit program
         """);
   }
 
 
   public String getString() {
-    return input.nextLine();
+    return inputString.nextLine();
   }
 
   public int getInt() {
-    return input.nextInt();
-  }
+    int test = 0;
+    try {
+      return inputNumber.nextInt();
+    } catch (Exception e) {
+      System.err.println("Wrong input, please use numbers. Try again");
+      inputNumber.nextLine(); return getInt();
+    }
 
-  public String scannerBug() {
-    return input.nextLine();
   }
-
 }
